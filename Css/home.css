@@ -1,144 +1,199 @@
-body{
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }
-    .hello{
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);        
-      }
-      nav ul li{
-        justify-content: space-evenly;
-      }
-      .ga{
-        background-color: #ffb921;
-      }
-      .game{
-        padding: 20px;
-      }
-      .card-group{
-        gap: 20px;
-        padding: 10px;
-      }
-      .stars{
-        color: gold;
-      }
-      .card-group {
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.hello {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li {
+  justify-content: space-evenly;
+}
+
+.ga {
+  background-color: #ffb921;
+}
+
+.game {
+  padding: 20px;
+}
+
+.card-group {
+  gap: 20px;
+  padding: 10px;
+}
+
+.stars {
+  color: gold;
+}
+
+.card-group {
   display: flex;
   justify-content: center;
 }
+
 .card {
   margin: 0 15px;
   width: 18rem; /* Fixed width for consistent card size */
 }
+
 .card-img-top {
   height: 150px; /* Fixed height */
   object-fit: cover; /* Ensure image covers the area without distortion */
   width: 100%; /* Full width to cover the card */
 }
-.links ul{
+
+.links ul {
   list-style: none;
 }
-.links ul li a{
+
+.links ul li a {
   text-decoration: none;
 }
-.email input{
- width: 400px;
- border-radius: 5px;
- padding: 10px;
+
+.email input {
+  width: 400px;
+  border-radius: 5px;
+  padding: 10px;
 }
-.servi button a{
-text-decoration: none;
-color: white;
+
+.servi button a {
+  text-decoration: none;
+  color: white;
 }
-.ser a{
-text-decoration: none;
-color:black;
-}
-.con a{
+
+.ser a {
   text-decoration: none;
   color: black;
 }
+
+.con a {
+  text-decoration: none;
+  color: black;
+}
+
 /* General Mobile Styles */
 @media only screen and (max-width: 500px) {
   /* Reduce font sizes */
   h1, h3, h4, h5, h6 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center; /* Center align headings */
   }
 
-  .he{
-display: none;
+  .he {
+    display: none;
   }
 
   p {
-      font-size: 1rem;
+    font-size: 1rem;
+    text-align: center; /* Center align text */
   }
 
-  .do{
+  .do {
     margin-top: 100px;
     overflow: hidden;
   }
 
   /* Stack elements vertically */
   .col-lg-8, .col-lg-4, .col-lg-7, .col-lg-5 {
-      width: 100%;
-      text-align: center;
-      margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
   }
-  
+
   /* Resize or hide large images */
   .col-lg-4 img, .col-lg-5 img {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: auto;
   }
-  
+
   /* Adjust navbar spacing and font sizes */
   .navbar-nav .nav-link {
-      font-size: 1.2rem;
-      margin: 5px 0;
+    font-size: 1.2rem;
+    margin: 5px 0;
   }
 
   /* Stack cards vertically */
   .card-group {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   /* Adjust container padding */
   .container-fluid, .container {
-      padding: 10px;
+    padding: 10px;
   }
 
   /* Center footer content */
   .footer {
-      text-align: center;
-      padding: 20px;
+    text-align: center;
+    padding: 20px;
   }
-  .con{
+
+  /* Hide elements not needed on mobile */
+  .con, .ser {
     display: none;
   }
-  
-  .ser{
-    display: none;
+
+  /* Adjust the navbar toggle button to ensure it can toggle on and off */
+  .navbar-toggler {
+    display: block;
+    background-color: transparent;
+    border: none;
   }
+
+  .navbar-toggler:focus, .navbar-toggler:hover {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .navbar-collapse {
+    display: none; /* Initially hidden */
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    text-align: center;
+  }
+
+  .navbar-collapse.show {
+    display: block; /* Show when toggled */
+  }
+
+  /* Script to toggle navbar on and off */
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+
+      navbarToggler.addEventListener('click', function () {
+        navbarCollapse.classList.toggle('show');
+      });
+    });
+  </script>
 }
 
 /* Tablet and Small Laptop Styles */
 @media (min-width: 769px) and (max-width: 1024px) {
   /* Adjust content slightly for tablets */
   h1, h2, h3, h4, h5, h6 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .navbar-nav .nav-link {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .col-lg-8, .col-lg-4, .col-lg-7, .col-lg-5 {
-      width: 100%;
-      text-align: left;
+    width: 100%;
+    text-align: left;
   }
 
   .card-group {
-      flex-direction: row;
+    flex-direction: row;
   }
 }

@@ -82,6 +82,8 @@ nav ul li {
     text-align: center; /* Center align headings */
   }
 
+  body{
+    overflow: hidden;
   .he {
     display: none;
   }

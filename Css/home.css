@@ -78,14 +78,8 @@ nav ul li {
 @media only screen and (max-width: 500px) {
   /* Reduce font sizes */
   h1, h3, h4, h5, h6 {
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center; /* Center align headings */
-  }
-
-  body{
-    overflow: hidden;
-  .he {
-    display: none;
   }
 
   p {
@@ -155,7 +149,7 @@ nav ul li {
     display: none; /* Initially hidden */
     position: absolute;
     width: 100%;
-    background-color: #rgb(129, 129, 129);
+    background-color: rgb(129, 129, 129);;
     top: 100%;
     left: 0;
     z-index: 1000;
@@ -166,17 +160,7 @@ nav ul li {
     display: block; /* Show when toggled */
   }
 
-  /* Script to toggle navbar on and off */
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const navbarToggler = document.querySelector('.navbar-toggler');
-      const navbarCollapse = document.querySelector('.navbar-collapse');
-
-      navbarToggler.addEventListener('click', function () {
-        navbarCollapse.classList.toggle('show');
-      });
-    });
-  </script>
+ 
 }
 
 /* Tablet and Small Laptop Styles */
